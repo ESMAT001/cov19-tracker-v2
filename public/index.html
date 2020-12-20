@@ -4,10 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="./assets/css/bootstrap.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <title>cov19-tracker</title>
 </head>
 
 <body>
+    <div class="app">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand btn-primary btn" href="#">Navbar</a>
+
+
+            <a class="nav-link ml-auto" href="#">Features</a>
+        </nav>
+
+        <div class="container-fluid">
+            <section>
+                <div class="row">
+                    <div class="col-12 col-md-10 mx-auto my-3 py-3 px-lg-4">
+                        <h1 class="h3 font-weight-light">Covid-19 tracker </h1>
+                        <p class="font-weight-light lead mb-0">
+                            As the virus that causes Covid-19 spreads worldwide, this website offers a snapshot of the crisis right now. Turn on your location to get Latest covid 19 data and news about your country.
+                        </p>
+                        <p class="font-weight-light lead mb-0">
+                            search country name in search bar to get more detail about covid 19 status, or see the full <a href="#countries-list">countries list</a>.</p>
+                        <p class="font-weight-light lead mb-0">You can also get info about countries by clicking on countries at <a href="#world-map">worlds Map</a>.</p>
+                        <p class="font-weight-light lead mb-0">The datasets are drawn from over 6 sources and can be reviewed <a href="source.html">here</a>. In some cases, data on hospitalizations were not available.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="p-3">
+                <div class="row my-5 mb-3">
+                    <div class="col-12 col-sm-6 mx-auto">
+                        <div class="card bg-primary text-white btn  mx-auto shadow mb-3" style="max-width: 25rem;">
+                            <div class="card-body">
+                                <h4 class="card-title">Total cases</h4>
+                                <p class="card-text h2" id="worldTotalCases">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex  justify-content-around">
+                    <div class="col-12 col-sm-4">
+                        <div class="card bg-success btn text-white mx-auto shadow mb-3" style="max-width: 20rem;">
+                            <div class="card-body">
+                                <h4 class="card-title">Total recovered</h4>
+                                <p class="card-text h2" id="worldTotalRecovered">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card bg-danger btn text-white mx-auto shadow mb-3" style="max-width: 20rem;">
+                            <div class="card-body">
+                                <h4 class="card-title">Total death</h4>
+                                <p class="card-text h2" id="worldTotalDeath">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card bg-warning text-white btn  mx-auto shadow mb-3" style="max-width: 20rem;">
+                            <div class="card-body">
+                                <h4 class="card-title">Total active</h4>
+                                <p class="card-text h2" id="worldTotalActive">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="card mx-auto border-primary mb-3" style="max-width: 20rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h4 class="card-title">Primary card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="hr">
+            <section>
+                <div class="text-center">
+                    this is icon
+                </div>
+            </section>
+            <hr class="hr">
+            <section class="clientCountry">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="card mx-auto border-primary mb-3" style="max-width: 20rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="card mx-auto border-primary mb-3" style="max-width: 20rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="countrySearch">
+                <div class="row">
+                    <div class="col-10 col-sm-8 col-md-5 mx-auto">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="submit">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-sm-4">
+                        <div class="card mx-auto border-primary mb-3" style="max-width: 20rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6">
+                        <div class="card mx-auto border-primary mb-3" style="max-width: 20rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Primary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="allTheCountries">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Column heading</th>
+                            <th scope="col">Column heading</th>
+                            <th scope="col">Column heading</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-active">
+                            <th scope="row">Active</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Default</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <th scope="row">Primary</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <th scope="row">Secondary</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Success</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <th scope="row">Danger</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <th scope="row">Warning</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-info">
+                            <th scope="row">Info</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">Light</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                        <tr class="table-dark">
+                            <th scope="row">Dark</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="worldMap">
+
+            </section>
+            <section class="clientCountryNews">
+
+            </section>
+            <section class="worldNews">
+
+            </section>
+            <footer class="footer">
+
+            </footer>
+        </div>
+    </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/8.2.1/firebase-app.js"></script>
@@ -17,7 +250,7 @@
     <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
 
     <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/init.js?useEmulator=true"></script>
     <script src="./app.js"></script>
 </body>
 
