@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="style" rel="stylesheet" href="./assets/css/bootstrap.css">
-
+     <style>
+         body{
+             background-color: #161625 !important;
+         }
+         p{
+             /* color:#6c757d !important; */
+         }
+     </style>
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
     <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
     <title>cov19-tracker</title>
 </head>
 
 <body>
     <div class="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand btn-primary btn" href="#">Navbar</a>
 
 
@@ -48,7 +55,7 @@
                         <div class="card bg-primary text-white btn  mx-auto shadow mb-3" style="max-width: 25rem;">
                             <div class="card-body">
                                 <h4 class="card-title">Total cases</h4>
-                                <p class="card-text h2" id="worldTotalCases">0</p>
+                                <p class="card-text h2" id="worldTotalConfirmed">0</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +73,7 @@
                         <div class="card bg-danger btn text-white mx-auto shadow mb-3" style="max-width: 20rem;">
                             <div class="card-body">
                                 <h4 class="card-title">Total death</h4>
-                                <p class="card-text h2" id="worldTotalDeath">0</p>
+                                <p class="card-text h2" id="worldTotalDeaths">0</p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +81,7 @@
                         <div class="card bg-warning text-white btn  mx-auto shadow mb-3" style="max-width: 20rem;">
                             <div class="card-body">
                                 <h4 class="card-title">Total active</h4>
-                                <p class="card-text h2" id="worldTotalActive">0</p>
+                                <p class="card-text h2" id="worldTotalActiveCases">0</p>
                             </div>
                         </div>
                     </div>
@@ -250,7 +257,12 @@
     <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
 
     <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="/__/firebase/init.js"></script>
+    
+    
+    <script src="./dataController.js"></script>
+    <script src="./uiController.js"></script>
+    <script src="./controller.js"></script>
     <script src="./app.js"></script>
 </body>
 
