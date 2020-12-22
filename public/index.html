@@ -5,14 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="style" rel="stylesheet" href="./assets/css/bootstrap.css">
-     <style>
-         body{
-             background-color: #161625 !important;
-         }
-         p{
-             /* color:#6c757d !important; */
-         }
-     </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- jQuery library -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
@@ -38,14 +31,21 @@
             <section>
                 <div class="row">
                     <div class="col-12 col-md-10 mx-auto my-3 py-3 px-lg-4">
+
                         <h1 class="h3 font-weight-light">Covid-19 tracker </h1>
                         <p class="font-weight-light lead mb-0">
-                            As the virus that causes Covid-19 spreads worldwide, this website offers a snapshot of the crisis right now. Turn on your location to get Latest covid 19 data and news about your country.
+                            As the virus that causes Covid-19 spreads worldwide, this website offers a snapshot of the
+                            crisis right now. Turn on your location to get Latest covid 19 data and news about your
+                            country.
                         </p>
                         <p class="font-weight-light lead mb-0">
-                            search country name in search bar to get more detail about covid 19 status, or see the full <a href="#countries-list">countries list</a>.</p>
-                        <p class="font-weight-light lead mb-0">You can also get info about countries by clicking on countries at <a href="#world-map">worlds Map</a>.</p>
-                        <p class="font-weight-light lead mb-0">The datasets are drawn from over 6 sources and can be reviewed <a href="source.html">here</a>. In some cases, data on hospitalizations were not available.</p>
+                            search country name in search bar to get more detail about covid 19 status, or see the full
+                            <a href="#countries-list">countries list</a>.</p>
+                        <p class="font-weight-light lead mb-0">You can also get info about countries by clicking on
+                            countries at <a href="#world-map">worlds Map</a>.</p>
+                        <p class="font-weight-light lead mb-0">The datasets are drawn from over 6 sources and can be
+                            reviewed <a href="source.html">here</a>. In some cases, data on hospitalizations were not
+                            available.</p>
                     </div>
                 </div>
             </section>
@@ -54,8 +54,18 @@
                     <div class="col-12 col-sm-6 mx-auto">
                         <div class="card bg-primary text-white btn  mx-auto shadow mb-3" style="max-width: 25rem;">
                             <div class="card-body">
-                                <h4 class="card-title">Total cases</h4>
-                                <p class="card-text h2" id="worldTotalConfirmed">0</p>
+                                <div class="loader">
+                                    <img src="./assets/img/loader.svg" alt="loader" class="ld breath">
+                                </div>
+                                <div class="data" style="display: none;">
+                                    <h2 class="card-title h4">
+                                        <span>
+                                            <img src="./assets/img/worldicon.svg" alt="worldicon" class="ld breath">
+                                        </span>
+                                        Total cases
+                                    </h2>
+                                    <p class="card-text h2" id="worldTotalConfirmed">0</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +103,8 @@
                         <div class="card-header">Header</div>
                         <div class="card-body">
                             <h4 class="card-title">Primary card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +123,8 @@
                             <div class="card-header">Header</div>
                             <div class="card-body">
                                 <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
@@ -121,7 +133,8 @@
                             <div class="card-header">Header</div>
                             <div class="card-body">
                                 <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
@@ -144,7 +157,8 @@
                             <div class="card-header">Header</div>
                             <div class="card-body">
                                 <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +167,8 @@
                             <div class="card-header">Header</div>
                             <div class="card-body">
                                 <h4 class="card-title">Primary card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
@@ -258,8 +273,8 @@
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
-    
-    
+
+
     <script src="./dataController.js"></script>
     <script src="./uiController.js"></script>
     <script src="./controller.js"></script>
