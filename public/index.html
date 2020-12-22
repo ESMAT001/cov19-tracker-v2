@@ -20,8 +20,12 @@
 
 <body>
     <div class="app">
-        <nav class="navbar navbar-expand-lg ">
-            <a class="navbar-brand btn-primary btn" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand  href="#">
+                <span> <img src="./assets/img/logo.svg" alt="cov19-tracker logo" > </span><span class="h3 text-dark">
+                    Cov19-tracker
+                </span>
+            </a>
 
 
             <a class="nav-link ml-auto" href="#">Features</a>
@@ -54,17 +58,17 @@
                     <div class="col-12 col-sm-6 mx-auto">
                         <div class="card bg-primary text-white btn  mx-auto shadow mb-3" style="max-width: 25rem;">
                             <div class="card-body">
-                                <div class="loader">
-                                    <img src="./assets/img/loader.svg" alt="loader" class="ld breath">
+                                <div class="loader my-5">
+                                    <img src="./assets/img/loader.svg" alt="loader" >
                                 </div>
-                                <div class="data" style="display: none;">
-                                    <h2 class="card-title h4">
+                                <div class="data display-none">
+                                    <h2 class="card-title h4 font-weight-bold">
                                         <span>
                                             <img src="./assets/img/worldicon.svg" alt="worldicon" class="ld breath">
                                         </span>
                                         Total cases
                                     </h2>
-                                    <p class="card-text h2" id="worldTotalConfirmed">0</p>
+                                    <h2 class="card-text h2 font-weight-bold" id="worldTotalConfirmed">0</h2>
                                 </div>
                             </div>
                         </div>
@@ -74,24 +78,57 @@
                     <div class="col-12 col-sm-4">
                         <div class="card bg-success btn text-white mx-auto shadow mb-3" style="max-width: 20rem;">
                             <div class="card-body">
-                                <h4 class="card-title">Total recovered</h4>
-                                <p class="card-text h2" id="worldTotalRecovered">0</p>
+                                <div class="loader my-5">
+                                    <img src="./assets/img/loader.svg" alt="loader" >
+                                </div>
+                                <div class="data display-none">
+                                    <h2 class="card-title h4 font-weight-bold">
+                                        <span>
+                                            <img src="./assets/img/worldicon.svg" alt="worldicon" class="ld breath">
+                                        </span>
+                                        Total recovered
+                                    </h2>
+                                    <h2 class="card-text h2 font-weight-bold" id="worldTotalRecovered">0</h2>
+                                    <h2 class="card-text h2"><span class="badge badge-light text-success ld breath">27.5%</span></h2>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-4">
                         <div class="card bg-danger btn text-white mx-auto shadow mb-3" style="max-width: 20rem;">
                             <div class="card-body">
-                                <h4 class="card-title">Total death</h4>
-                                <p class="card-text h2" id="worldTotalDeaths">0</p>
+                                <div class="loader my-5">
+                                    <img src="./assets/img/loader.svg" alt="loader" >
+                                </div>
+                                <div class="data display-none">
+                                    <h2 class="card-title h4 font-weight-bold">
+                                        <span class="">
+                                            <img src="./assets/img/death.svg" alt="deathicon" class="ld breath">
+                                        </span> 
+                                        Total death
+                                    </h2>
+                                    <h2 class="card-text h2 font-weight-bold" id="worldTotalDeaths">0</h2>
+                                    <h2 class="card-text h2"><span class="badge badge-light text-danger ld breath">27.5%</span></h2>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-4">
                         <div class="card bg-warning text-white btn  mx-auto shadow mb-3" style="max-width: 20rem;">
                             <div class="card-body">
-                                <h4 class="card-title">Total active</h4>
-                                <p class="card-text h2" id="worldTotalActiveCases">0</p>
+                                <div class="loader my-5">
+                                    <img src="./assets/img/loader.svg" alt="loader" >
+                                </div>
+                                <div class="data display-none">
+                                    <h2 class="card-title h4 font-weight-bold">
+                                        <span>
+                                            <img src="./assets/img/worldicon.svg" alt="worldicon" class="ld breath">
+                                        </span>
+                                        Total active
+                                    </h2>
+                                    <h2 class="card-text h2 font-weight-bold" id="worldTotalActiveCases">0</h2>
+                                    <h2 class="card-text h2"><span class="badge badge-light text-warning ld breath">27.5%</span></h2>
+                                </div>
                             </div>
                         </div>
                     </div>
