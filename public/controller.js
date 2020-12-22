@@ -1,8 +1,5 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
     let controller = ((uiCtrl, dataCtrl) => {
-
         return {
             init: () => {
                 dataCtrl.worldData().then(data => uiCtrl.insertWorldData(data));

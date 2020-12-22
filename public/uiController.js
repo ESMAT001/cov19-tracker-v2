@@ -1,10 +1,10 @@
 let uiController = (() => {
     let domStrings = {
         worldDataStrings: {
-            worldTotalConfirmed: ["totalConfirmed",null], //2nd Element is for badge
-            worldTotalDeaths: ["totalDeaths",true],
-            worldTotalRecovered: ["totalRecovered",true],
-            worldTotalActiveCases: ["totalActiveCases",true],
+            worldTotalConfirmed: ["totalConfirmed", null], //2nd Element is for badge
+            worldTotalDeaths: ["totalDeaths", true],
+            worldTotalRecovered: ["totalRecovered", true],
+            worldTotalActiveCases: ["totalActiveCases", true],
         },
         topCountries: "topCountries"
         ,
@@ -13,7 +13,7 @@ let uiController = (() => {
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-    async function insertWorldData(src, data,badge, val, sleepTimer) {
+    async function insertWorldData(src, data, badge, val, sleepTimer) {
         src = document.getElementById(src)
         await sleep(sleepTimer);
         let addValue = Math.round(data[0] / val)
@@ -31,12 +31,9 @@ let uiController = (() => {
             }
         }
         loop()
-        if(badge){
-            src.nextElementSibling.children[0].textContent=(Math.round(data[0]*100/data[1]))+"%"
-            // console.log(data[1])
-            
+        if (badge) {
+            src.nextElementSibling.children[0].textContent = ((data[0] * 100 / data[1]).toFixed(2)) + "%"
         }
-        
         return true;
     }
     async function fadeOutandFadeIn(src) {
@@ -59,7 +56,7 @@ let uiController = (() => {
                 if (domStrings.worldDataStrings.hasOwnProperty(key)) {
                     let timer = 1500 + (Math.random() * 2200)
                     fadeOutandFadeIn(key)
-                    insertWorldData(key, [data[domStrings.worldDataStrings[key][0]],data[domStrings.worldDataStrings["worldTotalConfirmed"][0]]],domStrings.worldDataStrings[key][1] ,domStrings.time, timer);
+                    insertWorldData(key, [data[domStrings.worldDataStrings[key][0]], data[domStrings.worldDataStrings["worldTotalConfirmed"][0]]], domStrings.worldDataStrings[key][1], domStrings.time, timer);
                 }
             }
         },
